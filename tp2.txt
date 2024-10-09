@@ -1,0 +1,7 @@
+        # Ejercicio 1 Tp 2
+1. ¿Qué calcula este algoritmo?
+    El algoritmo "Mystery" calcula la suma de los cuadrados de los primeros n números naturales.
+2. ¿Cuál es su operación básica?
+    La operación básica en este algoritmo es la multiplicación i * i. Esta operación se realiza en cada iteración del bucle for. 
+3. ¿Cuántas veces se ejecuta la operación básica?
+    La operación básica (i * i) se ejecuta exactamente n veces.
