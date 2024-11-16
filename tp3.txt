@@ -1,0 +1,25 @@
+Relación de Recurrencia
+    El algoritmo para calcular n! es:
+        F(n):
+            if n = 0:
+                return 1
+            else:
+                return F(n-1) * n
+
+En este caso, el número de llamadas realizadas𝑇(𝑛)T(n) incluye:
+        •	Una llamada para calcular𝐹(𝑛−1), que equivale a𝑇(𝑛−1).
+        •	La llamada inicial para𝐹(𝑛).
+    Por lo tanto:
+        𝑇(𝑛)=𝑇(𝑛−1) +1para𝑛>0,
+    con la condición inicial:
+        𝑇 (0) =1(la llamada base).
+Resolución de la Recurrencia: 
+    Aplicamos el método de sustitución hacia atrás: 
+        𝑇(𝑛)=𝑇(𝑛−1) +1,
+        𝑇(𝑛−1) =𝑇(𝑛−2) +1⟹𝑇(𝑛)=[𝑇(𝑛−2) +1]+1=𝑇(𝑛−2) +2,
+        𝑇(𝑛−2) =𝑇(𝑛−3) +1⟹𝑇(𝑛)=[𝑇(𝑛−3) +1+1]+1=𝑇(𝑛−3) +3
+    Después de k pasos: 𝑇(𝑛)=𝑇(𝑛−𝑘) +𝑘.
+    Sustituyendo 𝑘=𝑛 : 𝑇(𝑛)= 𝑇 (0) +𝑛=1+𝑛.
+Solución Final:
+    El número total de llamadas realizadas por𝐹(𝑛)F(n) es: 𝑇(𝑛)=𝑛+1.
+    Esto incluye la llamada inicial para calcular𝐹(𝑛) y las 𝑛 llamadas recursivas para calcular desde𝐹(𝑛−1) hasta𝐹 (0).
