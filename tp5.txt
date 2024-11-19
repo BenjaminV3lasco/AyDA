@@ -1,0 +1,20 @@
+Datos:
+    Patrón (P): "GANDHI", de longitud m=6m = 6m=6.
+    Texto (T): "THERE_IS_MORE_TO_LIFE_THAN_INCREASING_ITS_SPEED", de longitud n=47
+Proceso de comparación:
+    Se pueden alinear los m=6 caracteres del patrón en n−m+1=42 posiciones diferentes en el texto.
+    En cada posición, el algoritmo intenta comparar hasta m=6 caracteres.
+    Cuando ocurre un desajuste, se detienen las comparaciones y el algoritmo pasa al siguiente desplazamiento.
+
+Simulación:
+  Iteraciones:
+    1.	El patrón se compara con las primeras 6 letras de TTT: "THERE_". Hay un desajuste en el primer carácter.
+        Comparaciones realizadas: 1.
+    2.	El patrón se desplaza una posición y se compara con "HERE_I". Hay un desajuste en el primer carácter.
+    	Comparaciones realizadas: 1.
+    3.	Este proceso continúa para cada posición, encontrando un desajuste en el primer carácter hasta que alcanza la posición donde ya no es posible alinear todo el patrón.
+        Número total de comparaciones:
+        En cada una de las 42 alineaciones posibles, el algoritmo realiza exactamente 1 comparación porque el primer carácter de "GANDHI" no coincide con el primer carácter de ninguna de las alineaciones del texto.
+            Total de comparaciones= 42 * 1 = 42
+Conclusión:
+    El número de comparaciones de caracteres realizadas por el algoritmo de fuerza bruta en este caso es 42.
