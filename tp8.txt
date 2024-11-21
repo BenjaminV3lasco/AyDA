@@ -1,0 +1,44 @@
+La búsqueda binaria tiene un peor caso cuando el algoritmo debe realizar el mayor número de divisiones posibles para encontrar un elemento. Esto corresponde a la altura del árbol binario más 1. Dado que el tamaño del arreglo es 
+n=13, el número máximo de comparaciones es:
+
+    Máximo número de comparaciones = [Log2 (n)]
+        Calculando:
+            Log2 (13) = 3.7 = 4
+
+Por lo tanto, el mayor número de comparaciones realizadas en una búsqueda exitosa es 4.
+
+a) Número medio de comparaciones en una búsqueda binaria exitosa
+En una búsqueda exitosa, cada elemento del arreglo tiene la misma probabilidad de ser buscado. El número de comparaciones depende de la profundidad del elemento en el árbol binario:
+
+    Nivel 1 (raíz): 1 comparación.
+    Nivel 2: 2 comparaciones.
+    Nivel 3: 3 comparaciones.
+    Nivel 4: 4 comparaciones.
+
+El arreglo de 13 elementos se distribuye en los niveles del árbol:
+    Nivel 1: 1 elemento (raíz).
+    Nivel 2: 2 elementos.
+    Nivel 3: 4 elementos.
+    Nivel 4: 6 elementos.
+
+Para calcular el promedio ponderado de comparaciones, usamos la fórmula:
+        Promedio= ∑(elementos en nivel×nivel) / n
+    Sustituyendo:
+        Promedio = (1 * 1) + (2 * 2) + (4 * 3) + (6 * 4) / 13 = 41 / 13 = 3.15
+Por lo tanto, el número medio de comparaciones en una búsqueda exitosa es aproximadamente 3.15.
+
+b) Número promedio de comparaciones en una búsqueda sin éxito
+
+En una búsqueda sin éxito, consideramos los intervalos entre los elementos del arreglo:
+    [−∞,3],[3,14],[14,27],…,[93,98],[98,∞]
+
+Hay n+1=14 intervalos en total, y asumimos que todos son igualmente probables. El número de comparaciones para cada intervalo depende del nivel del árbol binario donde la búsqueda falla.
+Distribución de los intervalos en niveles del árbol:
+    Nivel 1 (raíz): 2 intervalos.
+    Nivel 2: 4 intervalos.
+    Nivel 3: 8 intervalos.
+    
+    Sustituyendo:
+        Promedio = (2 * 1) + (4 * 2) + (8* 3) / 14 = 34 / 14 = 2.43
+Por lo tanto, el número promedio de comparaciones en una búsqueda sin éxito es aproximadamente 3.15.
+
